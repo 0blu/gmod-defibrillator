@@ -1,0 +1,14 @@
+{
+    "title": "Defibrillator (Traitor respawn) - Trouble in Terrorist Town",
+    "type": "weapon",
+    "tags": [
+        "ttt",
+		"fun"
+    ],
+	"ignore": [
+		"*readme.md",
+		"*pictures*",
+		"*icon.jpg",
+		"*.git*"
+	]
+}

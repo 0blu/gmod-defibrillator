@@ -230,9 +230,13 @@ function SWEP:HandleRespawn()
 
   local credits = CORPSE.GetCredits(ragdoll, 0)
   
-  ply:SetRole(ROLE_TRAITOR)
-  ply:SetTeam(TEAM_TERROR)
-  SendFullStateUpdate()
+  -- Only make the target a traitor if defrib user is also a traitor
+  if self.Owner:GetRole() == ROLE_TRAITOR then
+	ply:SetRole(ROLE_TRAITOR)
+	ply:SetTeam(TEAM_TERROR)
+	SendFullStateUpdate()
+  end
+  
   ply:SpawnForRound(true)
   ply:SetCredits(credits)
   ply:SetPos(spawnPos)
