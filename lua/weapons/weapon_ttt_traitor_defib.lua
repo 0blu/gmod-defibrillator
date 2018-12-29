@@ -1,5 +1,5 @@
 if SERVER then
-  resource.AddFile("materials/vgui/ttt/icon_rg_defibrillator.png")
+  resource.AddFile("materials/vgui/ttt/icon_rg_traitor_defibrillator.png")
 end
 
 local STATE_NONE, STATE_PROGRESS, STATE_ERROR = 0, 1, 2
@@ -18,14 +18,14 @@ SWEP.CanBuy = {ROLE_TRAITOR}
 SWEP.LimitedStock = true
 
 if CLIENT then
-  SWEP.PrintName = "Defibrillator"
+  SWEP.PrintName = "Defibrillator Traitor Respawn"
   SWEP.Slot = 7
 
-  SWEP.Icon = "vgui/ttt/icon_rg_defibrillator.png"
+  SWEP.Icon = "vgui/ttt/icon_rg_traitor_defibrillator.png"
 
   SWEP.EquipMenuData = {
     type = "item_weapon",
-    name = "Defribrillator",
+    name = "Defribrillator (Traitor)",
     desc = "Resurrect dead mates with this one!\n(Will spawn the target as traitor)"
   }
 
